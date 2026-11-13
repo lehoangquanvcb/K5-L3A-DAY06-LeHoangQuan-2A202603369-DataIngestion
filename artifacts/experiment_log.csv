@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,note_topic,off,multilingual-MiniLM-L12-v2,Baseline,2/15,3/15,2/5,2/5,212 chunks
+B,paragraph,500,80 on long paragraphs,note_topic,off,multilingual-MiniLM-L12-v2,Giữ ngữ cảnh đoạn,7/15,7/15,2/5,2/5,273 chunks
+C,paragraph,500,80 on long paragraphs,note_topic,on when specified,multilingual-MiniLM-L12-v2,Lọc phạm vi câu hỏi,8/15,8/15,2/5,2/5,Chọn trên dev và dùng chung index B

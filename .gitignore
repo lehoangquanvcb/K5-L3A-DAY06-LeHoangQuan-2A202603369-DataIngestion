@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+.day06-vic/
+starter/data/VIC_FY2025_AUDITED_CONSOLIDATED.pdf

@@ -1,0 +1,284 @@
+{
+  "dev": {
+    "signature": {
+      "corpus_sha256": "4dc216a0b8181f66825096130131dd2d6c143725ed6fa376cacd8e4b3f91f2c5",
+      "benchmark_sha256": "71c7cee881b152b4adfd17d2ea7bf2caf9ebbbaa54de4f89e21840d8d040aa45",
+      "pipeline_sha256": "9cdfb451b9ddfa0aa5106ca4c5cc903c365fd35b91f2d54ae79d92f74ec29669",
+      "configs": {
+        "fixed_size": 500,
+        "fixed_overlap": 50,
+        "paragraph_max": 500,
+        "long_paragraph_overlap": 80
+      },
+      "model": {
+        "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "dimensions": 384,
+        "fastembed_version": "0.9.1",
+        "onnxruntime_version": "1.31.1"
+      }
+    },
+    "split": "dev",
+    "selected": "C",
+    "store": {
+      "name": "Qdrant local",
+      "version": "1.20.0",
+      "metric": "cosine",
+      "exact": true
+    },
+    "model_load_seconds": 1.2723,
+    "query_embedding_seconds": 0.2057,
+    "index": {
+      "A": {
+        "collection": "vic_2e627f9892365b338248_a",
+        "chunk_count": 212,
+        "characters": 98955,
+        "length_min": 67,
+        "length_median": 500.0,
+        "length_max": 500,
+        "index_seconds": 9.3163,
+        "reused": false,
+        "service_cost_usd": 0
+      },
+      "B": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 11.6017,
+        "reused": false,
+        "service_cost_usd": 0
+      },
+      "C": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 11.6017,
+        "reused": false,
+        "service_cost_usd": 0,
+        "shares_index_with": "B"
+      }
+    },
+    "metrics": {
+      "A": {
+        "questions": 15,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 3,
+        "filter_compliance": {
+          "correct": 1,
+          "total": 3
+        }
+      },
+      "B": {
+        "questions": 15,
+        "hit_at_1": 7,
+        "evidence_hit_at_3": 7,
+        "filter_compliance": {
+          "correct": 1,
+          "total": 3
+        }
+      },
+      "C": {
+        "questions": 15,
+        "hit_at_1": 8,
+        "evidence_hit_at_3": 8,
+        "filter_compliance": {
+          "correct": 3,
+          "total": 3
+        }
+      }
+    }
+  },
+  "test": {
+    "signature": {
+      "corpus_sha256": "4dc216a0b8181f66825096130131dd2d6c143725ed6fa376cacd8e4b3f91f2c5",
+      "benchmark_sha256": "71c7cee881b152b4adfd17d2ea7bf2caf9ebbbaa54de4f89e21840d8d040aa45",
+      "pipeline_sha256": "9cdfb451b9ddfa0aa5106ca4c5cc903c365fd35b91f2d54ae79d92f74ec29669",
+      "configs": {
+        "fixed_size": 500,
+        "fixed_overlap": 50,
+        "paragraph_max": 500,
+        "long_paragraph_overlap": 80
+      },
+      "model": {
+        "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "dimensions": 384,
+        "fastembed_version": "0.9.1",
+        "onnxruntime_version": "1.31.1"
+      }
+    },
+    "split": "test",
+    "selected": "C",
+    "store": {
+      "name": "Qdrant local",
+      "version": "1.20.0",
+      "metric": "cosine",
+      "exact": true
+    },
+    "model_load_seconds": 1.3112,
+    "query_embedding_seconds": 0.0876,
+    "index": {
+      "A": {
+        "collection": "vic_2e627f9892365b338248_a",
+        "chunk_count": 212,
+        "characters": 98955,
+        "length_min": 67,
+        "length_median": 500.0,
+        "length_max": 500,
+        "index_seconds": 0.0003,
+        "reused": true,
+        "service_cost_usd": 0
+      },
+      "B": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 0.0001,
+        "reused": true,
+        "service_cost_usd": 0
+      },
+      "C": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 0.0001,
+        "reused": true,
+        "service_cost_usd": 0,
+        "shares_index_with": "B"
+      }
+    },
+    "metrics": {
+      "A": {
+        "questions": 5,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 2,
+        "filter_compliance": {
+          "correct": 0,
+          "total": 1
+        }
+      },
+      "B": {
+        "questions": 5,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 2,
+        "filter_compliance": {
+          "correct": 0,
+          "total": 1
+        }
+      },
+      "C": {
+        "questions": 5,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 2,
+        "filter_compliance": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    }
+  },
+  "reingest": {
+    "signature": {
+      "corpus_sha256": "4dc216a0b8181f66825096130131dd2d6c143725ed6fa376cacd8e4b3f91f2c5",
+      "benchmark_sha256": "71c7cee881b152b4adfd17d2ea7bf2caf9ebbbaa54de4f89e21840d8d040aa45",
+      "pipeline_sha256": "9cdfb451b9ddfa0aa5106ca4c5cc903c365fd35b91f2d54ae79d92f74ec29669",
+      "configs": {
+        "fixed_size": 500,
+        "fixed_overlap": 50,
+        "paragraph_max": 500,
+        "long_paragraph_overlap": 80
+      },
+      "model": {
+        "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "dimensions": 384,
+        "fastembed_version": "0.9.1",
+        "onnxruntime_version": "1.31.1"
+      }
+    },
+    "split": "dev",
+    "selected": "C",
+    "store": {
+      "name": "Qdrant local",
+      "version": "1.20.0",
+      "metric": "cosine",
+      "exact": true
+    },
+    "model_load_seconds": 1.1955,
+    "query_embedding_seconds": 0.1989,
+    "index": {
+      "A": {
+        "collection": "vic_2e627f9892365b338248_a",
+        "chunk_count": 212,
+        "characters": 98955,
+        "length_min": 67,
+        "length_median": 500.0,
+        "length_max": 500,
+        "index_seconds": 0.0003,
+        "reused": true,
+        "service_cost_usd": 0
+      },
+      "B": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 0.0001,
+        "reused": true,
+        "service_cost_usd": 0
+      },
+      "C": {
+        "collection": "vic_2e627f9892365b338248_b",
+        "chunk_count": 273,
+        "characters": 92953,
+        "length_min": 2,
+        "length_median": 352,
+        "length_max": 500,
+        "index_seconds": 0.0001,
+        "reused": true,
+        "service_cost_usd": 0,
+        "shares_index_with": "B"
+      }
+    },
+    "metrics": {
+      "A": {
+        "questions": 15,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 3,
+        "filter_compliance": {
+          "correct": 1,
+          "total": 3
+        }
+      },
+      "B": {
+        "questions": 15,
+        "hit_at_1": 7,
+        "evidence_hit_at_3": 7,
+        "filter_compliance": {
+          "correct": 1,
+          "total": 3
+        }
+      },
+      "C": {
+        "questions": 15,
+        "hit_at_1": 8,
+        "evidence_hit_at_3": 8,
+        "filter_compliance": {
+          "correct": 3,
+          "total": 3
+        }
+      }
+    }
+  }
+}

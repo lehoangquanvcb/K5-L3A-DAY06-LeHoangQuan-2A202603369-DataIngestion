@@ -1,6 +1,6 @@
 {
-  "status": "draft_ocr_evidence_checked",
-  "notes": "Đã kiểm tra từng evidence_quote khớp văn bản OCR sau NFC và thu gọn khoảng trắng. Cần đối chiếu ảnh PDF gốc trước khi khóa benchmark và chạy retrieval. gold_page dùng số trang PDF vật lý. Chia theo trang, không dùng chung trang giữa dev và test; nhiều câu vẫn thuộc cùng phần thuyết minh.",
+  "status": "frozen_before_retrieval",
+  "notes": "Đã đối chiếu đáp án và bằng chứng của cả 20 câu với ảnh PDF gốc. evidence_quote giữ cách viết OCR để đối chiếu máy sau NFC và thu gọn khoảng trắng. gold_page là số trang vật lý. Dev và test không dùng chung trang, nhưng có chung chủ đề trong một báo cáo.",
   "selection_rule": "Chọn theo Evidence Hit@3 trên dev; nếu bằng điểm, ưu tiên Hit@1 trên dev, sau đó chi phí ingest thấp hơn.",
   "questions": [
     {
@@ -10,7 +10,8 @@
       "expected_answer": "19/09/2007.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 17,
-      "evidence_quote": "Cổ phiếu của Công ty đã được chính thức giao dịch tại Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh kễ từ ngày 19 tháng 9 năm 2007 theo Quyết định số 106/QĐÐ-TTGDHCM do Giám đốc Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh ký ngày 7 tháng 9 năm 2007."
+      "evidence_quote": "Cổ phiếu của Công ty đã được chính thức giao dịch tại Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh kễ từ ngày 19 tháng 9 năm 2007 theo Quyết định số 106/QĐÐ-TTGDHCM do Giám đốc Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh ký ngày 7 tháng 9 năm 2007.",
+      "printed_page": 14
     },
     {
       "id": "q02",
@@ -22,7 +23,8 @@
       "evidence_quote": "Tại ngày lập báo cáo tài chính hợp nhất này, Tập đoàn đã lập kế hoạch kinh doanh và dự báo dòng tiền cho 12 tháng tiếp theo kể từ ngày phát hành báo cáo tài chính hợp nhát",
       "filter": {
         "note_topic": "basis_of_preparation"
-      }
+      },
+      "printed_page": 15
     },
     {
       "id": "q03",
@@ -31,7 +33,8 @@
       "expected_answer": "Đồng Việt Nam (VND).",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 19,
-      "evidence_quote": "Báo cáo tài chính hợp nhất của Tập đoàn được trình bày bằng đồng Việt Nam (VND))"
+      "evidence_quote": "Báo cáo tài chính hợp nhất của Tập đoàn được trình bày bằng đồng Việt Nam (VND))",
+      "printed_page": 16
     },
     {
       "id": "q04",
@@ -40,7 +43,8 @@
       "expected_answer": "Từ ngày Tập đoàn thực sự nắm quyền kiểm soát đến ngày thực sự chấm dứt quyền kiểm soát.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 20,
-      "evidence_quote": "công ty con được hợp nhất toàn bộ kể từ ngày mua, là ngày Tập đoàn thực sự nắm quyền kiểm soát công ty con, và tiếp tục được hợp nhất cho đến ngày Tập đoàn thực sự châm dứt quyền kiểm soát đối với công ty con."
+      "evidence_quote": "công ty con được hợp nhất toàn bộ kể từ ngày mua, là ngày Tập đoàn thực sự nắm quyền kiểm soát công ty con, và tiếp tục được hợp nhất cho đến ngày Tập đoàn thực sự châm dứt quyền kiểm soát đối với công ty con.",
+      "printed_page": 17
     },
     {
       "id": "q05",
@@ -49,7 +53,8 @@
       "expected_answer": "Theo giá trị thuần có thể thực hiện được.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 22,
-      "evidence_quote": "Trường hợp giá trị thuần có thể thực hiện được thắp hơn giá gốc thì phải tính theo giá trị thuần có thể thực hiện được."
+      "evidence_quote": "Trường hợp giá trị thuần có thể thực hiện được thắp hơn giá gốc thì phải tính theo giá trị thuần có thể thực hiện được.",
+      "printed_page": 19
     },
     {
       "id": "q06",
@@ -58,7 +63,8 @@
       "expected_answer": "Chi phí quản lý doanh nghiệp.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 23,
-      "evidence_quote": "Tăng hoặc giảm số dư tài khoản dự phòng được hạch toán vào chỉ phí quản lý doanh nghiệp trong báo cáo kết quả hoạt động kinh doanh hợp nhất."
+      "evidence_quote": "Tăng hoặc giảm số dư tài khoản dự phòng được hạch toán vào chỉ phí quản lý doanh nghiệp trong báo cáo kết quả hoạt động kinh doanh hợp nhất.",
+      "printed_page": 20
     },
     {
       "id": "q07",
@@ -70,7 +76,8 @@
       "evidence_quote": "Thỏa thuận thuê tài sản được phân loại là thuê tài chính nếu theo hợp đồng thuê tải sản bên cho thuê chuyễn giao phần lớn rủi ro và lợi ích gắn liền với quyên sở hữu tài sản cho bên đi thuê.",
       "filter": {
         "note_topic": "accounting_policies"
-      }
+      },
+      "printed_page": 21
     },
     {
       "id": "q08",
@@ -79,7 +86,8 @@
       "expected_answer": "Nguyên giá trừ hao mòn lũy kế.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 25,
-      "evidence_quote": "Tài sản cố định vô hình được ghi nhận theo nguyên giá trừ đi giá trị hao mòn lũy kế."
+      "evidence_quote": "Tài sản cố định vô hình được ghi nhận theo nguyên giá trừ đi giá trị hao mòn lũy kế.",
+      "printed_page": 22
     },
     {
       "id": "q09",
@@ -88,7 +96,8 @@
       "expected_answer": "Được vốn hóa vào nguyên giá của tài sản đó.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 28,
-      "evidence_quote": "Chi phí đi vay liên quan trực tiếp đến việc mua sắm, xây dựng hoặc hình thành một tài sản cụ thể cần có một thời gian đủ dài để có thể đưa vào sử dụng theo mục đích định trước hoặc để bán được vốn hóa vào nguyên giá của tài sản đó."
+      "evidence_quote": "Chi phí đi vay liên quan trực tiếp đến việc mua sắm, xây dựng hoặc hình thành một tài sản cụ thể cần có một thời gian đủ dài để có thể đưa vào sử dụng theo mục đích định trước hoặc để bán được vốn hóa vào nguyên giá của tài sản đó.",
+      "printed_page": 25
     },
     {
       "id": "q10",
@@ -97,7 +106,8 @@
       "expected_answer": "Phương pháp vốn chủ sở hữu.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 31,
-      "evidence_quote": "Khoản đầu tư của Tập đoản vào các công ty liên doanh được hạch toán theo phương pháp vốn chủ sở hữu."
+      "evidence_quote": "Khoản đầu tư của Tập đoản vào các công ty liên doanh được hạch toán theo phương pháp vốn chủ sở hữu.",
+      "printed_page": 28
     },
     {
       "id": "q11",
@@ -106,7 +116,8 @@
       "expected_answer": "Không. Việc ghi nhận không phụ thuộc vào việc đã nhận hóa đơn.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 32,
-      "evidence_quote": "Các khoản phải trả và chí phí trích trước được ghi nhận cho số tiền phải trả trong tương lai liên quan đến hàng hóa và dịch vụ đã nhận được không phụ thuộc vào việc Tập đoàn đã nhận được hỏa đơn của nhà cung cấp hay chưa."
+      "evidence_quote": "Các khoản phải trả và chí phí trích trước được ghi nhận cho số tiền phải trả trong tương lai liên quan đến hàng hóa và dịch vụ đã nhận được không phụ thuộc vào việc Tập đoàn đã nhận được hỏa đơn của nhà cung cấp hay chưa.",
+      "printed_page": 29
     },
     {
       "id": "q12",
@@ -115,7 +126,8 @@
       "expected_answer": "Không vượt quá ±1%.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 35,
-      "evidence_quote": "Các nghiệp vụ phát sinh bằng các đơn vị tiền tệ khác với đơn vị tiền tệ trong kế toán của Tập đoàn (VND) được hạch toán theo tỷ giá xấp xỉ với tỷ giá mua bán chuyển khoản trung bình của ngân hàng thương mại nơi Tập đoàn thường xuyên có giao dịch (\"tỷ giá mua bán chuyển khoản trung bình\"). Tỷ giá xắp xỉ này có chênh lệch không vượt quá +/-1% so với tỷ giá mua bán chuyễn khoản trung bình."
+      "evidence_quote": "Các nghiệp vụ phát sinh bằng các đơn vị tiền tệ khác với đơn vị tiền tệ trong kế toán của Tập đoàn (VND) được hạch toán theo tỷ giá xấp xỉ với tỷ giá mua bán chuyển khoản trung bình của ngân hàng thương mại nơi Tập đoàn thường xuyên có giao dịch (\"tỷ giá mua bán chuyển khoản trung bình\"). Tỷ giá xắp xỉ này có chênh lệch không vượt quá +/-1% so với tỷ giá mua bán chuyễn khoản trung bình.",
+      "printed_page": 32
     },
     {
       "id": "q13",
@@ -124,7 +136,8 @@
       "expected_answer": "Theo mệnh giá.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 36,
-      "evidence_quote": "Cổ phiếu phổ thông có quyền biểu quyết được ghi nhận theo mệnh giá."
+      "evidence_quote": "Cổ phiếu phổ thông có quyền biểu quyết được ghi nhận theo mệnh giá.",
+      "printed_page": 33
     },
     {
       "id": "q14",
@@ -136,7 +149,8 @@
       "evidence_quote": "Trong tháng 12 năm 2025, Tập đoàn đã mua 100% tỷ lệ sở hữu trong Công ty VinES từ các đối tác. Tổng giá phí của giao dịch là 12.300 tỷ VND. Theo đó, Công ty VinES trở thành công ty con của Tập đoản. Hoạt động chính của Công ty VinES là đầu tư, xây dựng và kinh doanh bắt động sản. Giao dịch này được đánh giá là giao dịch mua nhóm tài sản.",
       "filter": {
         "note_topic": "business_transactions"
-      }
+      },
+      "printed_page": 39
     },
     {
       "id": "q15",
@@ -145,7 +159,8 @@
       "expected_answer": "Từ 1 đến 3 tháng.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 44,
-      "evidence_quote": "Các khoản tương đương tiền vào ngảy 31 tháng 12 năm 2025 bao gồm các khoản tiền gửi có kỳ hạn từ 1 tháng đến 3 tháng"
+      "evidence_quote": "Các khoản tương đương tiền vào ngảy 31 tháng 12 năm 2025 bao gồm các khoản tiền gửi có kỳ hạn từ 1 tháng đến 3 tháng",
+      "printed_page": 41
     },
     {
       "id": "q16",
@@ -157,7 +172,8 @@
       "evidence_quote": "Hết thời hạn bảo hành công trình xây dựng, trường hợp số dự phòng phải trả về bảo hành cho công trình xây dựng và bất động sản đã lập lớn hơn chỉ phí thực tế phát sinh thì số chênh lệch được hoàn nhập ghi vào thu nhập khác.",
       "filter": {
         "note_topic": "accounting_policies"
-      }
+      },
+      "printed_page": 30
     },
     {
       "id": "q17",
@@ -166,7 +182,8 @@
       "expected_answer": "Khi từng nghĩa vụ riêng biệt được hoàn thành với khách hàng.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 38,
-      "evidence_quote": "Trong giao dịch Tập đoàn cung cấp nhiều sản phẩm và dịch vụ cho khách hàng trong cùng một hợp đồng, Tập đoàn xác định các nghĩa vụ bán sản phẩm và nghĩa vụ cung cấp dịch vụ và/hoặc hàng hóa kèm theo riêng biệt trong hợp đồng đó và chỉ ghi nhận doanh thu khi từng nghĩa vụ riêng biệt được Tập đoàn hoàn thành với khách hàng."
+      "evidence_quote": "Trong giao dịch Tập đoàn cung cấp nhiều sản phẩm và dịch vụ cho khách hàng trong cùng một hợp đồng, Tập đoàn xác định các nghĩa vụ bán sản phẩm và nghĩa vụ cung cấp dịch vụ và/hoặc hàng hóa kèm theo riêng biệt trong hợp đồng đó và chỉ ghi nhận doanh thu khi từng nghĩa vụ riêng biệt được Tập đoàn hoàn thành với khách hàng.",
+      "printed_page": 35
     },
     {
       "id": "q18",
@@ -175,7 +192,8 @@
       "expected_answer": "Bằng chi phí hợp đồng đã phát sinh mà việc hoàn trả tương đối chắc chắn.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 39,
-      "evidence_quote": "Khi kết quả thực hiện hợp đồng xây dựng không thể được ước tính một cách đáng tin cậy, doanh thu chỉ được ghi nhận tương đương với chi phí của hợp đồng đã phát sinh mà việc hoàn trả là tương đối chắc chắn."
+      "evidence_quote": "Khi kết quả thực hiện hợp đồng xây dựng không thể được ước tính một cách đáng tin cậy, doanh thu chỉ được ghi nhận tương đương với chi phí của hợp đồng đã phát sinh mà việc hoàn trả là tương đối chắc chắn.",
+      "printed_page": 36
     },
     {
       "id": "q19",
@@ -184,7 +202,8 @@
       "expected_answer": "Phải thu thương mại, trả trước cho nhà cung cấp, phải thu gốc và lãi cho vay đã quá hạn thanh toán.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 49,
-      "evidence_quote": "Nợ xấu của Tập đoàn chủ yếu bao gồm các khoản phải thu thương mại, trả trước cho nhà cung cấp, phải thu gốc và lãi cho vay đã quá hạn thanh toán:"
+      "evidence_quote": "Nợ xấu của Tập đoàn chủ yếu bao gồm các khoản phải thu thương mại, trả trước cho nhà cung cấp, phải thu gốc và lãi cho vay đã quá hạn thanh toán:",
+      "printed_page": 46
     },
     {
       "id": "q20",
@@ -193,7 +212,8 @@
       "expected_answer": "11,46%/năm.",
       "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
       "gold_page": 55,
-      "evidence_quote": "Chi phí đi vay liên quan đến các khoản vay chung được vốn hóa được xác định theo tỷ lệ vốn hóa 11,46%/năm"
+      "evidence_quote": "Chi phí đi vay liên quan đến các khoản vay chung được vốn hóa được xác định theo tỷ lệ vốn hóa 11,46%/năm",
+      "printed_page": 52
     }
   ]
 }

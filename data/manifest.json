@@ -12,15 +12,19 @@
   "uploaded_copy_sha256": "e4eed8cd0695b5856e973144ea0c990b5bb083165942522ef67711314a53cc2c",
   "physical_pdf_pages": 126,
   "extraction": {
-    "status": "ocr_required",
+    "status": "ocr_screened",
     "text_pages_detected_by_pdftotext": 0,
     "ocr_language": "vie",
-    "verified_usable_pages": null,
-    "normalized_character_count": null
+    "normalized_character_count": 90287,
+    "ocr_engine": "Tesseract",
+    "render_dpi": 300,
+    "ocr_pages_with_text": 40,
+    "screened_usable_pages": 37,
+    "normalization": "NFC; thu gọn khoảng trắng khi đếm ký tự và đối chiếu evidence."
   },
   "page_selection": {
     "page_numbering": "PDF page là số trang vật lý bắt đầu từ 1. Lưu số trang in khi đối chiếu được. Mục lục cung cấp các khoảng trang in bên dưới.",
-    "status": "candidate_ranges_pending_ocr",
+    "status": "selected_after_ocr_screening",
     "sections": [
       {
         "section": "balance_sheet",
@@ -52,6 +56,291 @@
       }
     ],
     "counting_rule": "Chỉ tính trang có nội dung liên quan và OCR đọc được sau kiểm tra. Loại bìa, mục lục, trang trống và trang giới thiệu EY. Phụ lục danh sách công ty con nằm ngoài phạm vi ban đầu. Ghi danh sách trang vật lý được tính và số ký tự từng trang sau OCR.",
-    "benchmark_note": "Chọn section từ tiêu đề báo cáo. Với câu hỏi số liệu, đối chiếu dòng chỉ tiêu, cột năm, đơn vị và dấu âm trên ảnh gốc trước khi chốt gold evidence."
+    "benchmark_note": "Lọc theo note_topic. Trang PDF 21 có cả mục 2.7 và mục 3; metadata cấp trang dùng mục 2, cần gán theo đoạn nếu dùng trang này cho câu hỏi lọc. Gold evidence giữ văn bản OCR để đối chiếu; kiểm tra ảnh gốc trước khi khóa benchmark.",
+    "pages": [
+      {
+        "pdf_page": 17,
+        "normalized_ocr_characters": 2433,
+        "section": "notes",
+        "note_topic": "company_information",
+        "include": true
+      },
+      {
+        "pdf_page": 18,
+        "normalized_ocr_characters": 2246,
+        "section": "notes",
+        "note_topic": "basis_of_preparation",
+        "include": true
+      },
+      {
+        "pdf_page": 19,
+        "normalized_ocr_characters": 2062,
+        "section": "notes",
+        "note_topic": "basis_of_preparation",
+        "include": true
+      },
+      {
+        "pdf_page": 20,
+        "normalized_ocr_characters": 2958,
+        "section": "notes",
+        "note_topic": "basis_of_preparation",
+        "include": true
+      },
+      {
+        "pdf_page": 21,
+        "normalized_ocr_characters": 2519,
+        "section": "notes",
+        "note_topic": "basis_of_preparation",
+        "include": true
+      },
+      {
+        "pdf_page": 22,
+        "normalized_ocr_characters": 2767,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 23,
+        "normalized_ocr_characters": 2630,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 24,
+        "normalized_ocr_characters": 2724,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 25,
+        "normalized_ocr_characters": 2607,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 26,
+        "normalized_ocr_characters": 2192,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 27,
+        "normalized_ocr_characters": 2647,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 28,
+        "normalized_ocr_characters": 3690,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 29,
+        "normalized_ocr_characters": 3147,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 30,
+        "normalized_ocr_characters": 3624,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 31,
+        "normalized_ocr_characters": 2385,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 32,
+        "normalized_ocr_characters": 3100,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 33,
+        "normalized_ocr_characters": 2874,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 34,
+        "normalized_ocr_characters": 2126,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 35,
+        "normalized_ocr_characters": 2742,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 36,
+        "normalized_ocr_characters": 1902,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 37,
+        "normalized_ocr_characters": 2725,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 38,
+        "normalized_ocr_characters": 2320,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 39,
+        "normalized_ocr_characters": 3092,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 40,
+        "normalized_ocr_characters": 3147,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 41,
+        "normalized_ocr_characters": 2528,
+        "section": "notes",
+        "note_topic": "accounting_policies",
+        "include": true
+      },
+      {
+        "pdf_page": 42,
+        "normalized_ocr_characters": 3260,
+        "section": "notes",
+        "note_topic": "business_transactions",
+        "include": true
+      },
+      {
+        "pdf_page": 43,
+        "normalized_ocr_characters": 2188,
+        "section": "notes",
+        "note_topic": "business_transactions",
+        "include": true
+      },
+      {
+        "pdf_page": 44,
+        "normalized_ocr_characters": 2038,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 45,
+        "normalized_ocr_characters": 1686,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 46,
+        "normalized_ocr_characters": 1814,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 47,
+        "normalized_ocr_characters": 1296,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 48,
+        "normalized_ocr_characters": 2126,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 49,
+        "normalized_ocr_characters": 1376,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 50,
+        "normalized_ocr_characters": 1989,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 51,
+        "normalized_ocr_characters": 1667,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 52,
+        "normalized_ocr_characters": 1977,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": false,
+        "reason": "OCR hiện tại bị sai hướng, văn bản không đọc được."
+      },
+      {
+        "pdf_page": 53,
+        "normalized_ocr_characters": 1123,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": false,
+        "reason": "OCR hiện tại bị sai hướng, văn bản không đọc được."
+      },
+      {
+        "pdf_page": 54,
+        "normalized_ocr_characters": 1538,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 55,
+        "normalized_ocr_characters": 2122,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": true
+      },
+      {
+        "pdf_page": 56,
+        "normalized_ocr_characters": 1642,
+        "section": "notes",
+        "note_topic": "financial_statement_notes",
+        "include": false,
+        "reason": "OCR hiện tại bị sai hướng, văn bản không đọc được."
+      }
+    ]
   }
 }

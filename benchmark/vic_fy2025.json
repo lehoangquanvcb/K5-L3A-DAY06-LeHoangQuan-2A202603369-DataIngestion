@@ -1,0 +1,199 @@
+{
+  "status": "draft_ocr_evidence_checked",
+  "notes": "Đã kiểm tra từng evidence_quote khớp văn bản OCR sau NFC và thu gọn khoảng trắng. Cần đối chiếu ảnh PDF gốc trước khi khóa benchmark và chạy retrieval. gold_page dùng số trang PDF vật lý. Chia theo trang, không dùng chung trang giữa dev và test; nhiều câu vẫn thuộc cùng phần thuyết minh.",
+  "selection_rule": "Chọn theo Evidence Hit@3 trên dev; nếu bằng điểm, ưu tiên Hit@1 trên dev, sau đó chi phí ingest thấp hơn.",
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "question": "Cổ phiếu của Vingroup bắt đầu giao dịch tại HOSE vào ngày nào?",
+      "expected_answer": "19/09/2007.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 17,
+      "evidence_quote": "Cổ phiếu của Công ty đã được chính thức giao dịch tại Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh kễ từ ngày 19 tháng 9 năm 2007 theo Quyết định số 106/QĐÐ-TTGDHCM do Giám đốc Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh ký ngày 7 tháng 9 năm 2007."
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "question": "Theo phần cơ sở trình bày, dự báo dòng tiền dùng cho đánh giá hoạt động liên tục bao phủ thời gian bao lâu?",
+      "expected_answer": "12 tháng kể từ ngày phát hành BCTC hợp nhất.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 18,
+      "evidence_quote": "Tại ngày lập báo cáo tài chính hợp nhất này, Tập đoàn đã lập kế hoạch kinh doanh và dự báo dòng tiền cho 12 tháng tiếp theo kể từ ngày phát hành báo cáo tài chính hợp nhát",
+      "filter": {
+        "note_topic": "basis_of_preparation"
+      }
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "question": "Vingroup trình bày BCTC hợp nhất bằng đồng tiền nào?",
+      "expected_answer": "Đồng Việt Nam (VND).",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 19,
+      "evidence_quote": "Báo cáo tài chính hợp nhất của Tập đoàn được trình bày bằng đồng Việt Nam (VND))"
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "question": "Công ty con được hợp nhất từ thời điểm nào đến thời điểm nào?",
+      "expected_answer": "Từ ngày Tập đoàn thực sự nắm quyền kiểm soát đến ngày thực sự chấm dứt quyền kiểm soát.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 20,
+      "evidence_quote": "công ty con được hợp nhất toàn bộ kể từ ngày mua, là ngày Tập đoàn thực sự nắm quyền kiểm soát công ty con, và tiếp tục được hợp nhất cho đến ngày Tập đoàn thực sự châm dứt quyền kiểm soát đối với công ty con."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "question": "Hàng tồn kho sản xuất được ghi theo giá trị nào khi giá trị thuần có thể thực hiện được thấp hơn giá gốc?",
+      "expected_answer": "Theo giá trị thuần có thể thực hiện được.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 22,
+      "evidence_quote": "Trường hợp giá trị thuần có thể thực hiện được thắp hơn giá gốc thì phải tính theo giá trị thuần có thể thực hiện được."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "question": "Biến động dự phòng nợ phải thu khó đòi được hạch toán vào khoản chi phí nào?",
+      "expected_answer": "Chi phí quản lý doanh nghiệp.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 23,
+      "evidence_quote": "Tăng hoặc giảm số dư tài khoản dự phòng được hạch toán vào chỉ phí quản lý doanh nghiệp trong báo cáo kết quả hoạt động kinh doanh hợp nhất."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "question": "Theo phần chính sách kế toán, khi nào hợp đồng thuê được phân loại là thuê tài chính?",
+      "expected_answer": "Khi bên cho thuê chuyển giao phần lớn rủi ro và lợi ích gắn với quyền sở hữu tài sản cho bên đi thuê.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 24,
+      "evidence_quote": "Thỏa thuận thuê tài sản được phân loại là thuê tài chính nếu theo hợp đồng thuê tải sản bên cho thuê chuyễn giao phần lớn rủi ro và lợi ích gắn liền với quyên sở hữu tài sản cho bên đi thuê.",
+      "filter": {
+        "note_topic": "accounting_policies"
+      }
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "question": "Tài sản cố định vô hình được ghi nhận theo cơ sở giá trị nào?",
+      "expected_answer": "Nguyên giá trừ hao mòn lũy kế.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 25,
+      "evidence_quote": "Tài sản cố định vô hình được ghi nhận theo nguyên giá trừ đi giá trị hao mòn lũy kế."
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "question": "Chi phí đi vay liên quan trực tiếp đến việc hình thành tài sản cần thời gian đủ dài để sử dụng hoặc bán được xử lý thế nào?",
+      "expected_answer": "Được vốn hóa vào nguyên giá của tài sản đó.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 28,
+      "evidence_quote": "Chi phí đi vay liên quan trực tiếp đến việc mua sắm, xây dựng hoặc hình thành một tài sản cụ thể cần có một thời gian đủ dài để có thể đưa vào sử dụng theo mục đích định trước hoặc để bán được vốn hóa vào nguyên giá của tài sản đó."
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "question": "Khoản đầu tư vào công ty liên doanh được hạch toán theo phương pháp nào?",
+      "expected_answer": "Phương pháp vốn chủ sở hữu.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 31,
+      "evidence_quote": "Khoản đầu tư của Tập đoản vào các công ty liên doanh được hạch toán theo phương pháp vốn chủ sở hữu."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "question": "Có cần đợi hóa đơn nhà cung cấp để ghi nhận khoản phải trả hoặc chi phí trích trước cho hàng hóa, dịch vụ đã nhận không?",
+      "expected_answer": "Không. Việc ghi nhận không phụ thuộc vào việc đã nhận hóa đơn.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 32,
+      "evidence_quote": "Các khoản phải trả và chí phí trích trước được ghi nhận cho số tiền phải trả trong tương lai liên quan đến hàng hóa và dịch vụ đã nhận được không phụ thuộc vào việc Tập đoàn đã nhận được hỏa đơn của nhà cung cấp hay chưa."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "question": "Tỷ giá xấp xỉ dùng khi hạch toán nghiệp vụ ngoại tệ được chênh lệch tối đa bao nhiêu so với tỷ giá mua bán chuyển khoản trung bình?",
+      "expected_answer": "Không vượt quá ±1%.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 35,
+      "evidence_quote": "Các nghiệp vụ phát sinh bằng các đơn vị tiền tệ khác với đơn vị tiền tệ trong kế toán của Tập đoàn (VND) được hạch toán theo tỷ giá xấp xỉ với tỷ giá mua bán chuyển khoản trung bình của ngân hàng thương mại nơi Tập đoàn thường xuyên có giao dịch (\"tỷ giá mua bán chuyển khoản trung bình\"). Tỷ giá xắp xỉ này có chênh lệch không vượt quá +/-1% so với tỷ giá mua bán chuyễn khoản trung bình."
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "question": "Cổ phiếu phổ thông có quyền biểu quyết được ghi nhận theo giá nào?",
+      "expected_answer": "Theo mệnh giá.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 36,
+      "evidence_quote": "Cổ phiếu phổ thông có quyền biểu quyết được ghi nhận theo mệnh giá."
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "question": "Theo phần giao dịch mua bán, sáp nhập, giao dịch mua VinES được phân loại thế nào?",
+      "expected_answer": "Giao dịch mua nhóm tài sản.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 42,
+      "evidence_quote": "Trong tháng 12 năm 2025, Tập đoàn đã mua 100% tỷ lệ sở hữu trong Công ty VinES từ các đối tác. Tổng giá phí của giao dịch là 12.300 tỷ VND. Theo đó, Công ty VinES trở thành công ty con của Tập đoản. Hoạt động chính của Công ty VinES là đầu tư, xây dựng và kinh doanh bắt động sản. Giao dịch này được đánh giá là giao dịch mua nhóm tài sản.",
+      "filter": {
+        "note_topic": "business_transactions"
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "question": "Tiền gửi thuộc các khoản tương đương tiền tại 31/12/2025 có kỳ hạn trong khoảng nào?",
+      "expected_answer": "Từ 1 đến 3 tháng.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 44,
+      "evidence_quote": "Các khoản tương đương tiền vào ngảy 31 tháng 12 năm 2025 bao gồm các khoản tiền gửi có kỳ hạn từ 1 tháng đến 3 tháng"
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "question": "Theo phần chính sách kế toán, khi hết thời hạn bảo hành và dự phòng lớn hơn chi phí thực tế, Vingroup xử lý chênh lệch thế nào?",
+      "expected_answer": "Hoàn nhập chênh lệch vào thu nhập khác.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 33,
+      "evidence_quote": "Hết thời hạn bảo hành công trình xây dựng, trường hợp số dự phòng phải trả về bảo hành cho công trình xây dựng và bất động sản đã lập lớn hơn chỉ phí thực tế phát sinh thì số chênh lệch được hoàn nhập ghi vào thu nhập khác.",
+      "filter": {
+        "note_topic": "accounting_policies"
+      }
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "question": "Trong gói bán hàng có nhiều nghĩa vụ riêng biệt, khi nào Vingroup ghi nhận doanh thu của từng nghĩa vụ?",
+      "expected_answer": "Khi từng nghĩa vụ riêng biệt được hoàn thành với khách hàng.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 38,
+      "evidence_quote": "Trong giao dịch Tập đoàn cung cấp nhiều sản phẩm và dịch vụ cho khách hàng trong cùng một hợp đồng, Tập đoàn xác định các nghĩa vụ bán sản phẩm và nghĩa vụ cung cấp dịch vụ và/hoặc hàng hóa kèm theo riêng biệt trong hợp đồng đó và chỉ ghi nhận doanh thu khi từng nghĩa vụ riêng biệt được Tập đoàn hoàn thành với khách hàng."
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "question": "Nếu kết quả hợp đồng xây dựng chưa thể ước tính đáng tin cậy, doanh thu được ghi nhận đến mức nào?",
+      "expected_answer": "Bằng chi phí hợp đồng đã phát sinh mà việc hoàn trả tương đối chắc chắn.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 39,
+      "evidence_quote": "Khi kết quả thực hiện hợp đồng xây dựng không thể được ước tính một cách đáng tin cậy, doanh thu chỉ được ghi nhận tương đương với chi phí của hợp đồng đã phát sinh mà việc hoàn trả là tương đối chắc chắn."
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "question": "Thuyết minh nợ xấu của Vingroup mô tả các nhóm khoản mục quá hạn chủ yếu nào?",
+      "expected_answer": "Phải thu thương mại, trả trước cho nhà cung cấp, phải thu gốc và lãi cho vay đã quá hạn thanh toán.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 49,
+      "evidence_quote": "Nợ xấu của Tập đoàn chủ yếu bao gồm các khoản phải thu thương mại, trả trước cho nhà cung cấp, phải thu gốc và lãi cho vay đã quá hạn thanh toán:"
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "question": "Tỷ lệ vốn hóa chi phí đi vay đối với các khoản vay chung trong năm 2025 là bao nhiêu?",
+      "expected_answer": "11,46%/năm.",
+      "gold_source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+      "gold_page": 55,
+      "evidence_quote": "Chi phí đi vay liên quan đến các khoản vay chung được vốn hóa được xác định theo tỷ lệ vốn hóa 11,46%/năm"
+    }
+  ]
+}

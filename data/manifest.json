@@ -1,0 +1,57 @@
+{
+  "source_id": "VIC_FY2025_AUDITED_CONSOLIDATED",
+  "title": "Tập đoàn Vingroup – Báo cáo tài chính hợp nhất đã kiểm toán năm 2025",
+  "issuer": "Tập đoàn Vingroup – Công ty CP",
+  "fiscal_year": 2025,
+  "published_at": "2026-03-25",
+  "accessed_at": "2026-11-13",
+  "source_path_or_url": "https://www.vingroup.net/quan-he-co-dong/bao-cao-tai-chinh/2025",
+  "download_instructions": "Trong cột Q4, mở PDF ngày 25/3/2026 ở dòng Báo Cáo Hợp Nhất Kiểm Toán/Soát Xét. Tải bản tiếng Việt và lưu tại đường dẫn local_path, tính từ thư mục gốc repo.",
+  "local_path": "starter/data/VIC_FY2025_AUDITED_CONSOLIDATED.pdf",
+  "license_or_permission": "Công bố công khai trên trang Quan hệ cổ đông Vingroup. Dùng nguồn công bố để người chấm truy cập. Quyền tái phân phối PDF chưa được xác minh.",
+  "uploaded_copy_sha256": "e4eed8cd0695b5856e973144ea0c990b5bb083165942522ef67711314a53cc2c",
+  "physical_pdf_pages": 126,
+  "extraction": {
+    "status": "ocr_required",
+    "text_pages_detected_by_pdftotext": 0,
+    "ocr_language": "vie",
+    "verified_usable_pages": null,
+    "normalized_character_count": null
+  },
+  "page_selection": {
+    "page_numbering": "PDF page là số trang vật lý bắt đầu từ 1. Lưu số trang in khi đối chiếu được. Mục lục cung cấp các khoảng trang in bên dưới.",
+    "status": "candidate_ranges_pending_ocr",
+    "sections": [
+      {
+        "section": "balance_sheet",
+        "printed_pages": [
+          6,
+          9
+        ]
+      },
+      {
+        "section": "income_statement",
+        "printed_pages": [
+          10,
+          11
+        ]
+      },
+      {
+        "section": "cash_flow",
+        "printed_pages": [
+          12,
+          13
+        ]
+      },
+      {
+        "section": "notes",
+        "printed_pages": [
+          14,
+          109
+        ]
+      }
+    ],
+    "counting_rule": "Chỉ tính trang có nội dung liên quan và OCR đọc được sau kiểm tra. Loại bìa, mục lục, trang trống và trang giới thiệu EY. Phụ lục danh sách công ty con nằm ngoài phạm vi ban đầu. Ghi danh sách trang vật lý được tính và số ký tự từng trang sau OCR.",
+    "benchmark_note": "Chọn section từ tiêu đề báo cáo. Với câu hỏi số liệu, đối chiếu dòng chỉ tiêu, cột năm, đơn vị và dấu âm trên ảnh gốc trước khi chốt gold evidence."
+  }
+}
